@@ -16,5 +16,18 @@ namespace WebBrowser
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                WebBrowser1.Url = new Uri(urlTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                // Error message for an invalid web address
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
